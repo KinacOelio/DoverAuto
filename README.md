@@ -1,9 +1,16 @@
 # WebTechMidTerm
 Planned pages:
+
+
   index
+  
   catalog
-    product description
+  
+  product description
+    
   login
+  
   about
+  
   contact
   
