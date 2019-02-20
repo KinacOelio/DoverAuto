@@ -1,2 +1,9 @@
 # WebTechMidTerm
-a website
+Planned pages:
+  index
+  catalog
+    product description
+  login
+  about
+  contact
+  
