@@ -1,11 +1,11 @@
 body{
-background-color: #EFEFEF;
+background-color: #d4c4c4;
 
 }
 
 img {
-width: 100%;
-
+max-width: 100%;
+border: solid lightgrey 3px;
 
 
 }
