@@ -12,16 +12,20 @@ border: solid lightgrey 3px;
 
 
 .container{
-width: 120%;
+width: 100%;
 
 }
 .navbar{
 width: 100%;
 margin-bottom: 15px;
 
-
-
 }
+
+#OR .name{
+color: white;
+padding: 8px;
+}
+
 .nav-item{
 padding: 15px;
 
@@ -32,7 +36,4 @@ max-width: 55px;
 float: left;
 
 
-}
-.login{
-float: right;
 }
