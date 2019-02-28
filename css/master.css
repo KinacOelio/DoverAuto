@@ -7,9 +7,10 @@ img {
 max-width: 100%;
 border: solid lightgrey 3px;
 
-
 }
-
+.navbar{
+background-color: #353535;
+}
 
 .container{
 width: 100%;
@@ -34,6 +35,10 @@ padding: 15px;
 .navbar-brand{
 max-width: 55px;
 float: left;
+}
 
+footer{
 
+background-color: black;
+color: white;
 }
