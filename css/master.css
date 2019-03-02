@@ -16,9 +16,11 @@ background-color: #353535;
 width: 100%;
 
 }
-.navbar{
+.navmain{
 width: 100%;
 margin-bottom: 15px;
+height: 13%;
+position: fixed;
 
 }
 
@@ -42,3 +44,6 @@ footer{
 background-color: black;
 color: white;
 }
+
+
+
