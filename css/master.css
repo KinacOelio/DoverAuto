@@ -31,12 +31,13 @@ padding: 8px;
 
 .nav-item{
 padding: 15px;
+background-color: #353535;
 
 }
 
 .navbar-brand{
 max-width: 55px;
-float: left;
+
 }
 
 footer{
@@ -45,5 +46,8 @@ background-color: black;
 color: white;
 }
 
-
+#OR .login{
+	float: ;
+	
+}
 
