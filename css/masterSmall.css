@@ -1,11 +1,17 @@
 body{
 background-color: #D9D9D9;
-font-family:  corbel, consolas, sans-serif;
+font-family:calibri,  corbel, consolas, sans-serif;
+padding-top: 100px;
 }
-#navbar{
-margin-bottom: 2%;	
-	
+
+#OR .navbar{
+margin-bottom: 2%;
+width: 100%;	
 }
+
+h1{color: #353535;}
+h2, p{color: #4d4d4d;}
+
 
 img {
 max-width: 100%;
@@ -14,6 +20,7 @@ border: solid lightgrey 3px;
 }
 .navbar{
 background-color: #353535;
+
 }
 
 .container{
@@ -25,7 +32,6 @@ width: 100%;
 margin-bottom: 15px;
 height: 13%;
 position: fixed;
-
 }
 
 #OR .name{
@@ -38,21 +44,22 @@ padding: 15px;
 background-color: #353535;
 
 }
-
+.navLinks{width: 100%;}
 .navbar-brand{
-max-width: 55px;
+width: 55px;
 
 }
 
 footer{
+position: relative;
+margin-top: 275px;
 bottom: 0px;
 background-color: black;
 color: white;
 padding: 1%;
 }
 
-#OR .login{
-	float: ;
-	
-}
+
+
+
 

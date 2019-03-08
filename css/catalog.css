@@ -13,11 +13,13 @@ padding-left: 0%;
 	
 }
 
+h2{margin-left: 4%;}
 
 .cat img{
 position: relative;
  width: 75%;
 transition: width .5s;
+border: solid white 2px;
 	
 }
 
@@ -36,6 +38,7 @@ p{
 margin: 1%;	
 	
 }
+.carName {color: #353535;}
 
  .price , .mpg{
 
