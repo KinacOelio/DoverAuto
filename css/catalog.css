@@ -13,7 +13,7 @@ padding-left: 0%;
 	
 }
 
-h2{margin-left: 4%;}
+h2, h1{margin-left: 40px;}
 
 .cat img{
 position: relative;
@@ -35,10 +35,11 @@ opacity: .9;
 }
 
 p{
-margin: 1%;	
+margin: 1%;
+color: 	
 	
 }
-.carName {color: #353535;}
+.carName {color: #164460;}
 
  .price , .mpg{
 
