@@ -1,6 +1,53 @@
 .cat{
-	padding: 25px;
+	padding: 5px;
+	margin: auto;
+	padding-left: 5%;
+	transition: padding-left .5s;
+	margin-top: 10px;
 	
 }
 
+.cat:hover {
+width: 100%;	
+padding-left: 0%;
+	
+}
+
+
+.cat img{
+position: relative;
+ width: 75%;
+transition: width .5s;
+	
+}
+
+	
+.cat:hover img{
+width: 100%;
+
+	
+}
+
+.cat:hover .price,.cat:hover .mpg{
+opacity: .9;	
+}
+
+p{
+margin: 1%;	
+	
+}
+
+ .price , .mpg{
+
+opacity: 0;
+transition: opacity .75s;
+transition-delay: .5s;
+	
+
+}
+
+.carName{
+	
+font-size: 26px;	
+}
 

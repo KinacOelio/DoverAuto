@@ -1,6 +1,10 @@
 body{
 background-color: #D9D9D9;
-
+font-family:  corbel, consolas, sans-serif;
+}
+#navbar{
+margin-bottom: 2%;	
+	
 }
 
 img {
@@ -41,9 +45,10 @@ max-width: 55px;
 }
 
 footer{
-
+bottom: 0px;
 background-color: black;
 color: white;
+padding: 1%;
 }
 
 #OR .login{
