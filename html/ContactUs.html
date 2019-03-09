@@ -39,7 +39,6 @@
 }
 
 #cSub:hover {
-
 animation:rainbow 2s infinite;
 border-style: dashed;
 	
@@ -61,9 +60,9 @@ border-style: dashed;
 
 	<title>Midterm Project Codes</title>
 
-	<link rel="stylesheet" href="bootstrap/bootstrap.css">
-	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="css/HomepageCSS.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	
 	
 </head>
 <body>
@@ -78,13 +77,13 @@ border-style: dashed;
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="homePage.html">Home</a>
+        <a class="nav-link" href="homePage.html">Home </a>
       </li>
-     
+  
       <li class="nav-item">
         <a class="nav-link" href="pricing.html">Pricing</a>
       </li>
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="commentPage.html">Comments</a>
       </li>
        <li class="nav-item">
@@ -93,16 +92,15 @@ border-style: dashed;
       <li class="nav-item">
         <a class="nav-link" href="AboutUs.html">About</a>
       </li>
-	  <li class="nav-item">
-        <a class="nav-link" href="ContactUs.html">Contact Us</a>
+	<li class="nav-item active">
+        <a class="nav-link" href="ContactUs.html">Contact Us<span class="sr-only">(current)</span></a>
       </li>
-	  
 	  <li class="nav-item">
         <a class="nav-link" href="member.html">Not a member?</a>
       </li>
 	  
-	  <li class="nav-item active">
-        <a class="nav-link" href="Login.html">member Login <span class="sr-only">(current)</span></a>
+	  <li class="nav-item">
+        <a class="nav-link" href="Login.html">member Login</a>
       </li>
        <li class="nav-item">
         <a class="nav-link" href="votePage.html">Vote</a>
@@ -113,32 +111,26 @@ border-style: dashed;
   </div>
 </nav>
 </header>
+<br/>
 
-<h2 class="form" id = "cf">LogIn </h2>
+<h2 class="form" id = "cf">CONTACT </h2>
 <hr>
 <br/>
 
 <div class="container">
   <form action="#">
-    <label>ID:</label>
-    <input type="text" id="in" name="name" placeholder="" required>
-	
-	
-	<label>Password:</label>
-    <input type="password" class="in" name="password" placeholder="Enter Password"
-	 required>
-	
-	<div>
-			<p><a href="member.html"> <Strong>Not a member?</strong></a></p>
-			
-	</div>
-	
-	
-	
+    <label>Name:</label>
+    <input type="text" class="in" name="name" placeholder="Your nickname">
 
-   
+    <label>Email:</label>
+    <input type="text" class="in" name="email" placeholder="Your Email">
 
-    <input type="submit" id="cSub" value="Log In">
-	<p><a href="ForgotPass.html"> <Strong>Forgot password?</strong></a></p>
+
+    <label>Comment:</label>
+    <textarea class="in" name="comment" placeholder="Give us your honest feedback" style="height:150px"></textarea>
+
+    <input type="submit" id="cSub" value="Submit">
   </form>
 </div>
+</body>
+</html>

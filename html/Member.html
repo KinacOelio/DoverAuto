@@ -14,18 +14,6 @@
 	font-size: 20px;
 }
 
-.in{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-	font-size: 20px;
-}
-
 #cSub {
     background-color: white;
     border: 3px solid;
@@ -33,13 +21,16 @@
     cursor: pointer;
 	font-size: 30px;
 	 width: 100%;
+  display: center;
   align-self: center;
 	 font-family: 'Jura', sans-serif;
 		
 }
 
 #cSub:hover {
-
+    webkit-animation:rainbow 2s infinite;
+ms-animation:rainbow 2s infinite;
+o-animation:rainbow 2s infinite;
 animation:rainbow 2s infinite;
 border-style: dashed;
 	
@@ -63,7 +54,7 @@ border-style: dashed;
 
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="css/HomepageCSS.css">
+	<link rel="stylesheet" href="css/HomePage.css">
 	
 </head>
 <body>
@@ -78,13 +69,13 @@ border-style: dashed;
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="homePage.html">Home</a>
+        <a class="nav-link" href="homePage.html">Home </a>
       </li>
      
       <li class="nav-item">
         <a class="nav-link" href="pricing.html">Pricing</a>
       </li>
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="commentPage.html">Comments</a>
       </li>
        <li class="nav-item">
@@ -93,52 +84,64 @@ border-style: dashed;
       <li class="nav-item">
         <a class="nav-link" href="AboutUs.html">About</a>
       </li>
+
 	  <li class="nav-item">
         <a class="nav-link" href="ContactUs.html">Contact Us</a>
       </li>
 	  
-	  <li class="nav-item">
-        <a class="nav-link" href="member.html">Not a member?</a>
+	  <li class="nav-item active">
+        <a class="nav-link" href="member.html">Not a member?<span class="sr-only">(current)</span></a>
       </li>
 	  
-	  <li class="nav-item active">
-        <a class="nav-link" href="Login.html">member Login <span class="sr-only">(current)</span></a>
+	  <li class="nav-item">
+        <a class="nav-link" href="Login.html">member Login </a>
       </li>
-       <li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link" href="votePage.html">Vote</a>
       </li>
     </ul>
-   
+    
   </div>
   </div>
 </nav>
 </header>
+<br/>
 
-<h2 class="form" id = "cf">LogIn </h2>
+<h2 class="form" id = "cf">Registration </h2>
 <hr>
 <br/>
 
 <div class="container">
   <form action="#">
-    <label>ID:</label>
-    <input type="text" id="in" name="name" placeholder="" required>
+    <label for="fname">First Name:</label>
+    <input type="text" id="in" name="name" placeholder="First Name" required>
 	
+	<label for="fname">Last Name:</label>
+    <input type="text" id="in" name="name" placeholder="Last Name" required>
+
+    <label for="email">Email:</label>
+    <input type="text" id="in" name="email" placeholder="Email@gmail.com"required>
 	
-	<label>Password:</label>
-    <input type="password" class="in" name="password" placeholder="Enter Password"
-	 required>
+	<label for="email">Confirm Email:</label>
+    <input type="text" id="in" name="email" placeholder="Email@gmail.com"required>
+
+	<label for="address">Shipping Address:</label>
+    <input type="text" id="in" name="email" placeholder="Full Address"required>
 	
-	<div>
-			<p><a href="member.html"> <Strong>Not a member?</strong></a></p>
-			
-	</div>
+	<label for="password">Password:</label>
+    <input type="password" id="in" name="password" placeholder="Enter Password"
+	min="6" max="20" required>
 	
+	<label for="password">Confirm Password:</label>
+    <input type="password" id="in" name="password" placeholder="Confirm Password"
+	min="6" max="20" required>
 	
 	
 
    
 
-    <input type="submit" id="cSub" value="Log In">
-	<p><a href="ForgotPass.html"> <Strong>Forgot password?</strong></a></p>
+    <input type="submit" id="cSub" value="Register as member">
   </form>
 </div>
+</body>
+</html>

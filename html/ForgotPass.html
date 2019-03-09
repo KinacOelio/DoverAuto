@@ -14,18 +14,6 @@
 	font-size: 20px;
 }
 
-.in{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-	font-size: 20px;
-}
-
 #cSub {
     background-color: white;
     border: 3px solid;
@@ -56,6 +44,7 @@ border-style: dashed;
 }
 </style>
 
+
 	 <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -63,7 +52,7 @@ border-style: dashed;
 
 	<link rel="stylesheet" href="bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="css/HomepageCSS.css">
+	<link rel="stylesheet" href="Homepage.css">
 	
 </head>
 <body>
@@ -77,14 +66,13 @@ border-style: dashed;
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="homePage.html">Home</a>
+      <li class="nav-item ">
+        <a class="nav-link" href="homePage.html">Home </a>
       </li>
-     
       <li class="nav-item">
         <a class="nav-link" href="pricing.html">Pricing</a>
       </li>
-      <li class="nav-item">
+       <li class="nav-item">
         <a class="nav-link" href="commentPage.html">Comments</a>
       </li>
        <li class="nav-item">
@@ -97,14 +85,14 @@ border-style: dashed;
         <a class="nav-link" href="ContactUs.html">Contact Us</a>
       </li>
 	  
-	  <li class="nav-item">
-        <a class="nav-link" href="member.html">Not a member?</a>
+	  <li  class="nav-item active">
+        <a class="nav-link" href="ContactUs.html">Contact Us<span class="sr-only">(current)</span></a>
       </li>
 	  
-	  <li class="nav-item active">
-        <a class="nav-link" href="Login.html">member Login <span class="sr-only">(current)</span></a>
+	  <li class="nav-item">
+        <a class="nav-link" href="Login.html">member Login</a>
       </li>
-       <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="votePage.html">Vote</a>
       </li>
     </ul>
@@ -113,32 +101,18 @@ border-style: dashed;
   </div>
 </nav>
 </header>
-
-<h2 class="form" id = "cf">LogIn </h2>
+<h2 class="form" id = "cf">Password Restore </h2>
 <hr>
 <br/>
 
 <div class="container">
   <form action="#">
-    <label>ID:</label>
-    <input type="text" id="in" name="name" placeholder="" required>
-	
-	
-	<label>Password:</label>
-    <input type="password" class="in" name="password" placeholder="Enter Password"
-	 required>
-	
-	<div>
-			<p><a href="member.html"> <Strong>Not a member?</strong></a></p>
-			
-	</div>
-	
-	
-	
 
-   
-
-    <input type="submit" id="cSub" value="Log In">
-	<p><a href="ForgotPass.html"> <Strong>Forgot password?</strong></a></p>
+    <label>Enter your Email</label>
+    <input type="text" id="in" name="email" placeholder="Email@gmail.com" required>
+	
+	
+	
+    <input type="submit"  id="cSub" value="Submit"> 
   </form>
 </div>
