@@ -24,7 +24,7 @@
 
 #cSub {
     background-color: white;
-    border: 3px solid;
+    border: 1px solid;
     border-radius: 4px;
     cursor: pointer;
 	font-size: 30px;
@@ -35,9 +35,8 @@
 }
 
 #cSub:hover {
-animation:rainbow 2s infinite;
-border-style: dashed;
-	
+background-color: #4d4d4d;
+border: none;
 	
 }
 
