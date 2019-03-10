@@ -16,3 +16,17 @@ main{
 	margin: 10px;
 }
 
+.card{
+background-color: red;	
+}
+
+#OR .bg-primary{
+background-color: green;	
+}
+
+
+h1{
+text-align: center;	
+margin: 40px;
+	
+}
