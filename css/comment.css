@@ -16,4 +16,18 @@ main{
 	margin: 10px;
 }
 
+.card{
+	background-color:#c1c7cf;
+	
+}
+.card:hover {
+  -ms-transform: scale(1.15); /* IE 9 */
+  -webkit-transform: scale(1.15); /* Safari 3-8 */
+  transform: scale(1.15); 
+}
 
+h1{
+text-align: center;	
+margin: 40px;
+	
+}
