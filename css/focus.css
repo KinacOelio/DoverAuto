@@ -1,11 +1,6 @@
-h1{
-background-color: blue;
-	
-	
-}
-
-jumbotron{
-	width: 120%;
+.col-3{
+background-color: red;	
+border: solid black 1px;
 	
 	
 }

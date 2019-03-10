@@ -59,6 +59,29 @@ color: white;
 padding: 1%;
 }
 
+.jumbotron h1{
+position: absolute;
+padding: 20px;
+color: #c1c7cf;
+z-index: 2;	
+font-size: 36px;
+
+	
+}
+
+.jumbotron{
+	position: relative;
+	width: 120%;
+	margin: ;
+	left: -10%
+}
+
+.jumbo{
+position: relative;
+margin-top: 0px;
+z-index: 1;
+	
+}
 
 
 
