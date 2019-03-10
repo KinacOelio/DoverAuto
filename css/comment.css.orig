@@ -1,0 +1,36 @@
+section{
+	margin: 50px;
+	padding-left: 4em;
+
+}
+
+footer{
+	margin-top: 10px;
+	height: 105px;
+}
+footer :first-child{
+	padding-top: 30px;
+	color: gray;
+}
+main{
+	margin: 10px;
+}
+
+<<<<<<< HEAD
+.card{
+background-color: red;	
+}
+
+#OR .bg-primary{
+background-color: green;	
+}
+
+
+h1{
+text-align: center;	
+margin: 40px;
+	
+}
+=======
+
+>>>>>>> 78d928924e08a689aef92f3a169105caae0956cf
