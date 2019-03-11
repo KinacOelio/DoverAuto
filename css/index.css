@@ -1,5 +1,29 @@
 jumbo{
 position: ;
 top: 20px;
-
 }
+
+figcaption{
+text-align: center;
+position: relative;
+top: -40px;	
+color: white;
+font-size: 18px;
+background-color: #4d4d4d;
+border: solid lightgrey 3px;
+border-top: none;	
+border-bottom: none;
+opacity: .8;
+	
+}
+
+.infoBanner{
+padding-top: 48px;
+margin-top: 14px;
+margin-bottom: 14px;
+background-color: rgba(255, 255, 255, .5);
+	
+}
+
+.bannerText0{color: black;}
+

@@ -1,6 +1,8 @@
 .col-3{
-background-color: red;	
+font-size: 18px;
+background-color: ;	
 border: solid black 1px;
-	
-	
+border-top: none;
+border-bottom: none;
+text-align: center;
 }

@@ -83,6 +83,36 @@ z-index: 1;
 	
 }
 
+.bannerText{
+display: none;	
+	
+}
+
+.browse{
+	font-size: 18px;
+position: relative;
+left: 20%;
+top: -48px;
+margin: auto;
+padding: 12px;
+width: 200px;
 
 
+background-color: rgba(0, 0, 0, .2);
+	
+}
 
+.arrow{
+max-height: 18px;
+border: none;
+margin-left: 8px;	
+	
+	
+}
+
+
+.aboutImg{
+	
+	
+	
+}
