@@ -33,6 +33,8 @@
 		<h2>Cars</h2>
 		</div>
 	</div>
+	<?php
+
 	<div class="row">
 		<div class="col-md-4 cat">
 			<a href="FireFocus.html"><img src="../images/car3.jpg" alt="2018 Fire"></a>
@@ -58,8 +60,9 @@
 			<p class="price">Starting at 18,000$<br></p>
 			<p class="mpg">Average 31 mpg</p>
 		</div>
-		</div>
-
+	</div>
+	?>
+	
 	<div class="row catHeader">
 		<div class="col">
 		<h2>SUVs</h2>
