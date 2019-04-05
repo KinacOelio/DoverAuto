@@ -1,3 +1,15 @@
+<?php
+//instantiating the PDO 
+define('DBHOST', '');
+define('DBNAME', 'cars');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
+$pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +30,7 @@
 
  <div id="navbar1"></div>
  <script>
-
 </script>
-
 
 <div class="container">
 <div class="row catHeader">
@@ -34,33 +44,48 @@
 		</div>
 	</div>
 	<?php
-
-	<div class="row">
-		<div class="col-md-4 cat">
-			<a href="FireFocus.html"><img src="../images/car3.jpg" alt="2018 Fire"></a>
-			<label class="carName">The 2018 Fire</label>
+	echo 'test';
+	$sqlAllCars = "select * from cars";
+	$result =$pdo->query($sqlAllCars);
+	echo
+	'<div class="row">';
+	while($row = $result->fetch()){
+	echo
+		'<div class="col-md-4 cat">
+			<a href="FireFocus.html"><img src="../images/'.$row['filePath'].'" alt="2018 Fire"></a>
+			<label class="carName">The '.$row['modelYear'].' '.$row['modelName'].'</label>
 			<p class="price">Starting at 31,000$<br></p>
 			<p class="mpg">Average 29 mpg</p>
-		</div>
-		<div class="col-md-4 cat">
-			<img src="../images/car1.jpg" alt="2020 Runabout">
-			<h3 class="carName">The 2020 Runabout</h3>
-			<p class="price">Starting at 20,000$<br></p>
-			<p class="mpg">Average 24 mpg</p>
-		</div>
-		<div class="col-md-4 cat">
-			<img src="../images/car2.jpg" alt="2019 Gambit">
-			<h3 class="carName">The 2019 Gambit</h3>
-			<p class="price">Starting at 18,000$<br></p>
-			<p class="mpg">Average 31 mpg</p>
-		</div>
-		<div class="col-md-4 cat">
-			<img src="../images/car4.jpg" alt="2019 Slide">
-			<h3 class="carName">The 2019 Slide</h3>
-			<p class="price">Starting at 18,000$<br></p>
-			<p class="mpg">Average 31 mpg</p>
-		</div>
-	</div>
+		</div>';
+	
+	//	<div class="col-md-4 cat">
+	//		<a href="FireFocus.html"><img src="../images/car3.jpg" alt="2018 Fire"></a>
+	//		<label class="carName">The 2018 Fire</label>
+	//		<p class="price">Starting at 31,000$<br></p>
+	//		<p class="mpg">Average 29 mpg</p>
+	//	</div>
+	//	<div class="col-md-4 cat">
+	//		<img src="../images/car1.jpg" alt="2020 Runabout">
+	//		<h3 class="carName">The 2020 Runabout</h3>
+	//		<p class="price">Starting at 20,000$<br></p>
+	//		<p class="mpg">Average 24 mpg</p>
+	//	</div>
+	//	<div class="col-md-4 cat">
+	//		<img src="../images/car2.jpg" alt="2019 Gambit">
+	//		<h3 class="carName">The 2019 Gambit</h3>
+	//		<p class="price">Starting at 18,000$<br></p>
+	//		<p class="mpg">Average 31 mpg</p>
+	//	</div>
+	//	<div class="col-md-4 cat">
+	//		<img src="../images/car4.jpg" alt="2019 Slide">
+	//		<h3 class="carName">The 2019 Slide</h3>
+	//		<p class="price">Starting at 18,000$<br></p>
+	//		<p class="mpg">Average 31 mpg</p>
+	//	</div>
+	}
+	echo
+	'</div>';
+
 	?>
 	
 	<div class="row catHeader">
