@@ -8,6 +8,26 @@ define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
 $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+
+function createCategory($modelType){
+global $pdo;
+	$sqlAllCars = "select * from cars";
+	$result =$pdo->query($sqlAllCars);
+	while($row = $result->fetch()){
+		if($modelType == $row['type']){
+			echo
+				'<div class="col-md-4 cat">
+					<a href="focus.php?modelID='.$row['modelID'].'"><img src="../images/'.$row['filePath'].'" alt="2018 Fire"></a>
+					<label class="carName">The '.$row['modelYear'].' '.$row['modelName'].'</label>
+					<p class="price">Starting at '.$row['BasePrice'].'$<br></p>
+					<p class="mpg">Average '.$row['MPG-mean'].' mpg</p>
+				</div>';
+		}
+	}
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -43,23 +63,9 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		<h2>Cars</h2>
 		</div>
 	</div>
+	<div class="row">
 	<?php
-	echo 'test';
-	$sqlAllCars = "select * from cars";
-	$result =$pdo->query($sqlAllCars);
-	echo
-	'<div class="row">';
-	//the cars bit
-	while($row = $result->fetch()){
-	echo
-		'<div class="col-md-4 cat">
-			<a href="focus.php?modelID='.$row['modelID'].'"><img src="../images/'.$row['filePath'].'" alt="2018 Fire"></a>
-			<label class="carName">The '.$row['modelYear'].' '.$row['modelName'].'</label>
-			<p class="price">Starting at '.$row['BasePrice'].'$<br></p>
-			<p class="mpg">Average '.$row['MPG-mean'].' mpg</p>
-		</div>';
-	}
-
+	createCategory("car");
 	?>
 	</div>
 	<div class="row catHeader">
@@ -68,52 +74,22 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		</div>
 	</div>	
 	<div class="row">
-		<div class="col-md-4 cat">
-			<img src="../images/suv1.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2019 Largo</h3>
-			<p class="price">Starting at 22,000$<br></p>
-			<p class="mpg">Average 21 mpg</p>
-			</div>
-		<div class="col-md-4 cat">
-			<img src="../images/suv2.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2019 Killa</h3>
-			<p class="price">Starting at 25,000$<br></p>
-			<p class="mpg">Average 19 mpg</p>
-			</div>
-		<div class="col-md-4 cat">
-			<img src="../images/suv3.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2019 Daily</h3>
-			<p class="price">Starting at 20,000$<br></p>
-			<p class="mpg">Average 25 mpg</p>
-		</div>
+	<?php
+	createCategory("SUV");
+	?>
 	</div>
 	
-<div class="row catHeader">
+	<div class="row catHeader">
 		<div class="col">
 		<h2>Trucks</h2>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-4 cat">
-			<img src="../images/truck1.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2020 Testo</h3>
-			<p class="price">Starting at 21,000$<br></p>
-			<p class="mpg">Average 13 mpg</p>
-			</div>
-		<div class="col-md-4 cat">
-			<img src="../images/truck2.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2019 Pimento</h3>
-			<p class="price">Starting at 18,000$<br></p>
-			<p class="mpg">Average 31 mpg</p>
-			</div>
-		<div class="col-md-4 cat">
-			<img src="../images/truck3.jpg" alt="2018 Fire">
-			<h3 class="carName">The 2018 Falcon</h3>
-			<p class="price">Starting at 21,000$<br></p>
-			<p class="mpg">Average 19 mpg</p>
-		</div>
-		</div>
+	<?php
+	createCategory("truck");
+	?>
 	</div>
+</div>
 
 
 
