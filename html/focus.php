@@ -1,3 +1,15 @@
+<?php
+//instantiating the PDO 
+define('DBHOST', '');
+define('DBNAME', 'cars');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
+$pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +30,26 @@
  
 <div class="container">
 
-<div class="jumbotron">
-  <h1>The 2018 Fire</h1>
-  <img class="jumbo" src="../images/car3.jpg" alt="2018 Fire">
+<?php
+	$sqlThisCar = "SELECT * FROM cars WHERE modelID =".$_GET['modelID'];
+	$result =$pdo->query($sqlThisCar);
+	$car = $result->fetch();
+	echo
+	$car['BasePrice'].
+	'<div class="jumbotron">
+		<h1>'.$car['modelYear'].' '.$car['modelName'].'</h1>
+		<img class="jumbo" src="../images/'.$car['filePath'].'" alt="'.$car['modelName'].'">
+	</div>
+	<div class="row justify-content-right">
+		<div class="col-3">'.$car['MPG-highway'].' MPG highway / '.$car['MPG-city'].' MPG city</div>
+		<div class="col-3">Starting at $'.$car['BasePrice'].' <br> Finance at $'.sprintf("%d", $car['BasePrice']/20).'/month</div>
+		<div class="col-3">'.$car['horsepower'].' horsepower</div>
+		<div class="col-3">Seats '.$car['seating'].'</div>
+	</div>';
+	
 
 
-</div>
-
-<div class="row justify-content-right">
-	<div class="col-3">28 mpg highway / 23 city</div>
-	<div class="col-3">Starting at $28,000 <br> Finance at $248/month</div>
-	<div class="col-3">300 Horsepower</div>
-	<div class="col-3">Seats 4</div>
-</div>
-
+ ?>
 </div>	
 
 

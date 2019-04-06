@@ -53,16 +53,15 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	while($row = $result->fetch()){
 	echo
 		'<div class="col-md-4 cat">
-			<a href="FireFocus.html"><img src="../images/'.$row['filePath'].'" alt="2018 Fire"></a>
+			<a href="focus.php?modelID='.$row['modelID'].'"><img src="../images/'.$row['filePath'].'" alt="2018 Fire"></a>
 			<label class="carName">The '.$row['modelYear'].' '.$row['modelName'].'</label>
 			<p class="price">Starting at '.$row['BasePrice'].'$<br></p>
 			<p class="mpg">Average '.$row['MPG-mean'].' mpg</p>
 		</div>';
 	}
-	echo
-	'</div>';
+
 	?>
-	
+	</div>
 	<div class="row catHeader">
 		<div class="col">
 		<h2>SUVs</h2>

@@ -8,6 +8,8 @@
 
 .cat:hover {
 width: 100%;	
+transition: width padding-left .5s;
+transition-delay: 2s
 padding-left: 0%;
 }
 
