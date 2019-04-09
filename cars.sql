@@ -4,7 +4,6 @@ USE `cars`;
 
 
 DROP TABLE IF EXISTS `cars`;
-
 CREATE TABLE `cars` (
   `modelID`     INTEGER NOT NULL AUTO_INCREMENT, 
   `filePath`    VARCHAR(255), 
@@ -54,4 +53,23 @@ VALUES ("Fire", "truck2.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
 VALUES ("Fire", "truck3.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
+
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE `locations` (
+  `locID`     INTEGER NOT NULL AUTO_INCREMENT, 
+  `adress`      VARCHAR(255), 
+  `hours`   	VARCHAR(255), 
+  INDEX (`locID`), 
+  PRIMARY KEY (`locID`)
+)  ENGINE=innodb DEFAULT CHARSET=utf8;
+SET autocommit=1;
+
+INSERT INTO locations (adress, hours) VALUES ("123 West st.", "Mon-Sun 9-5");
+INSERT INTO locations (adress, hours) VALUES ("1234 east st.", "Mon-Sun 9-5");
+INSERT INTO locations (adress, hours) VALUES ("12346 east st.", "Mon-Sun 9-5");
+INSERT INTO locations (adress, hours) VALUES ("678 east st.", "Mon-Sun 9-5");
+INSERT INTO locations (adress, hours) VALUES ("912 east st.", "Mon-Sun 9-5");
+INSERT INTO locations (adress, hours) VALUES ("321 east st.", "Mon-Sun 9-5");
+
 

@@ -8,7 +8,6 @@ define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
 $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
 function createCategory($modelType){
 global $pdo;
 	$sqlAllCars = "select * from cars";
@@ -25,9 +24,6 @@ global $pdo;
 		}
 	}
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -57,42 +53,38 @@ global $pdo;
 <div class="col"><h1>Vehichle Catalog</h1></div>
 </div>
 <hr>
-
 	<div class="row catHeader">
 		<div class="col">
-		<h2>Cars</h2>
+			<h2>Cars</h2>
 		</div>
 	</div>
 	<div class="row">
-	<?php
-	createCategory("car");
-	?>
+		<?php
+		createCategory("car");
+		?>
 	</div>
 	<div class="row catHeader">
 		<div class="col">
-		<h2>SUVs</h2>
+			<h2>SUVs</h2>
 		</div>
 	</div>	
 	<div class="row">
-	<?php
-	createCategory("SUV");
-	?>
+		<?php
+		createCategory("SUV");
+		?>
 	</div>
 	
 	<div class="row catHeader">
 		<div class="col">
-		<h2>Trucks</h2>
+			<h2>Trucks</h2>
 		</div>
 	</div>
-	<div class="row">
-	<?php
-	createCategory("truck");
-	?>
-	</div>
+		<div class="row">
+		<?php
+		createCategory("truck");
+		?>
+		</div>
 </div>
-
-
-
 
 </div>	
 

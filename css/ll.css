@@ -1,0 +1,25 @@
+body {
+background-color: rgba(255,255,255,0.5);
+}
+
+h4 {
+margin-top: 50px;
+}
+
+body {
+padding-top: 20px;
+}
+
+.dropdown-content {
+display: none;
+}
+
+.show {
+display:block;
+}
+
+.dropbtn{
+background-color: #164460;
+border: none;
+color: white;
+}
