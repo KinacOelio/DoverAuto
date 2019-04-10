@@ -1,7 +1,7 @@
 <?php
 //instantiating the PDO 
 define('DBHOST', '');
-define('DBNAME', 'locations');
+define('DBNAME', 'cars');
 define('DBUSER', 'root');
 define('DBPASS', '');
 define('DBCONNSTRING','mysql:dbname='.DBNAME.';charset=utf8mb4;');
@@ -9,23 +9,22 @@ $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 function location(){
-	//global $pdo;
-	//$sqlLocations = "SELECT * FROM locations";
-	//$result =$pdo->query($sqlLocations);
-	//while($row = $result->fetch()){
+	global $pdo;
+	$sqlLocations = "SELECT * FROM locations";
+	$result =$pdo->query($sqlLocations);
+	while($row = $result->fetch()){
 	echo 	
 		'<li>
 		<h4>Location 1</h4>
-		<h6>1337 Hacker prkw | 1.9 mi.</h6>
+		<h6>'.$row['adress'].' | 1.9 mi.</h6>
 		<div class="dropdown">
-			<button onclick="dropFunc1()" class="dropbtn">View Hours</button>
-			<div id="myDropdown1" class="dropdown-content">
-			<h6 href="#">Mon-Fri: 9 am-5pm</h6>
-			<h6 href="#">Sat: 9 am-3 pm</h6>
-			<h6 href="#">Sun: closed</h6>
+			<button class="dropbtn">View Hours</button>
+			<div name="hours" class="dropdown-content">
+			'.$row['hours'].'
 			</div>
 		</div> 	
 		</li>';
+	}
 }
 
 ?>
@@ -48,10 +47,10 @@ function location(){
 
 <body id="OR">
 <div class="container">
-<ol>
+<ol id="locations">
 
 <?php
-for($i = 0; $i<10; $i++){location();}
+location();
 ?>
 
 </ol>

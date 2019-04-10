@@ -37,6 +37,7 @@ global $pdo;
 	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/masterSmall.css">
 	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../css/masterLarge.css">
 	<link href="../css/catalog.css" rel="stylesheet">
+	<script type="text/javaScript" src="../javaScript/jquery-3.3.1.js"></script>
 
 </head>
 
@@ -92,7 +93,7 @@ global $pdo;
 <div id="footer"></div>
 <script>$("#footer").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/footer.html");</script> 
 
-<script type="text/javaScript" src="../javaScript/jquery-3.3.1.js"></script>
+
 <script src="../javaScript/master.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

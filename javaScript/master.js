@@ -1,10 +1,20 @@
+document.addEventListener("DOMContentLoaded", function(event) { 
 	
-$("#navbar1").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/navbar.html");
+	$("#navbar1").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/navbar.html");
 
-function dropFunc1() {document.getElementById("myDropdown1").classList.toggle("show");} 
-function dropFunc2() {document.getElementById("myDropdown2").classList.toggle("show");} 
-function dropFunc3() {document.getElementById("myDropdown3").classList.toggle("show");} 
-function dropFunc4() {document.getElementById("myDropdown4").classList.toggle("show");} 
-function dropFunc5() {document.getElementById("myDropdown5").classList.toggle("show");}
+	var locationList = document.getElementById("locations");
+	
+	locationList.addEventListener("click", function(e){
+		console.log(e.target);
+		var button = e.target;
+		button.classList.toggle("active");
+		var hours = document.querySelector(".active + .dropdown-content");
+		console.log(hours);
+		hours.classList.toggle("show");
+		button.classList.toggle("active");
+	});
+
+ 
 
 
+});
