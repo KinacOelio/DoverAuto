@@ -1,63 +1,59 @@
+<?php
+//instantiating the PDO 
+define('DBHOST', '');
+define('DBNAME', 'cars');
+define('DBUSER', 'root');
+define('DBPASS', '');
+define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
+$pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">  
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login</title>
+    <title>2018 Fire</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/masterSmall.css">
 	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../css/masterLarge.css">
-	<link href="../css/login.css" rel="stylesheet">
+	<link href="css/focus.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body id="OR">
  <div id="navbar"></div>
- <script>$("#navbar").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/navbar.html");</script> 
+
  
 <div class="container">
 
-
-
-
-<h2 class="form" id = "cf">LogIn </h2>
-<hr>
-<br/>
-
-<div class="container">
-  <form action="#">
-    <label>ID:</label>
-    <input type="text" id="in" name="name" placeholder="" required>
-	
-	
-	<label>Password:</label>
-    <input type="password" class="in" name="password" placeholder="Enter Password"
-	 required>
-	
-	<div>
-			<p><a href="member.html"> <Strong>Not a member?</strong></a></p>
-			
+<?php
+	$sqlThisCar = "SELECT * FROM cars WHERE modelID =".$_GET['modelID'];
+	$result =$pdo->query($sqlThisCar);
+	$car = $result->fetch();
+	echo
+	$car['BasePrice'].
+	'<div class="jumbotron">
+		<h1>'.$car['modelYear'].' '.$car['modelName'].'</h1>
+		<img class="jumbo" src="../images/'.$car['filePath'].'" alt="'.$car['modelName'].'">
 	</div>
+	<div class="row justify-content-right">
+		<div class="col-3">'.$car['MPG-highway'].' MPG highway / '.$car['MPG-city'].' MPG city</div>
+		<div class="col-3">Starting at $'.$car['BasePrice'].' <br> Finance at $'.sprintf("%d", $car['BasePrice']/20).'/month</div>
+		<div class="col-3">'.$car['horsepower'].' horsepower</div>
+		<div class="col-3">Seats '.$car['seating'].'</div>
+	</div>';
 	
-	
-	
-
-   
-
-    <input type="submit" id="cSub" value="Log In">
-	<p><a href="ForgotPass.html"> <Strong>Forgot password?</strong></a></p>
-  </form>
-</div>
 
 
-
+ ?>
 </div>	
 
 
-<div id="footer">
-<script>$("#footer").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/footer.html");</script> 
-</div>
+<div id="footer"></div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

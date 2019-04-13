@@ -40,9 +40,9 @@ function location(){
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/masterSmall.css">
 	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../css/masterLarge.css">
-	<link href="../css/ll.css" rel="stylesheet">
-	<script type="text/javaScript" src="../javaScript/jquery-3.3.1.js"></script>
-	<script src="../javaScript/master.js"></script>
+	<link href="css/ll.css" rel="stylesheet">
+	<script type="text/javaScript" src="javaScript/jquery-3.3.1.js"></script>
+	<script src="javaScript/master.js"></script>
 </head>
 
 <body id="OR">
