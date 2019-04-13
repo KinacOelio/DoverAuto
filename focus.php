@@ -18,8 +18,8 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     <title>2018 Fire</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/masterSmall.css">
-	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="../css/masterLarge.css">
+	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/masterSmall.css">
+	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/masterLarge.css">
 	<link href="css/focus.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -35,10 +35,9 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$result =$pdo->query($sqlThisCar);
 	$car = $result->fetch();
 	echo
-	$car['BasePrice'].
 	'<div class="jumbotron">
 		<h1>'.$car['modelYear'].' '.$car['modelName'].'</h1>
-		<img class="jumbo" src="../images/'.$car['filePath'].'" alt="'.$car['modelName'].'">
+		<img class="jumbo" src="images/'.$car['filePath'].'" alt="'.$car['modelName'].'">
 	</div>
 	<div class="row justify-content-right">
 		<div class="col-3">'.$car['MPG-highway'].' MPG highway / '.$car['MPG-city'].' MPG city</div>
@@ -52,9 +51,9 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  ?>
 </div>	
 
-
 <div id="footer"></div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="javaScript/master.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

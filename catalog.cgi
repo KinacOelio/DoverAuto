@@ -1,4 +1,4 @@
-
+<script>
 <?php
 //instantiating the PDO 
 define('DBHOST', '');

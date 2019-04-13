@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	
-	$("#navbar").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/navbar.html");
-	$("#footer").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/html/footer.html");
+	$("#navbar").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/navbar.html");
+	$("#footer").load("https://raw.githubusercontent.com/KinacOelio/WebTechMidTerm/master/footer.html");
 
 	var locationList = document.getElementById("locations");
 	
