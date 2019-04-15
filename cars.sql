@@ -1,7 +1,6 @@
-DROP DATABASE IF EXISTS `cars`;
-CREATE DATABASE IF NOT EXISTS `cars`;
-USE `cars`;
 
+
+USE `kiattome_cars`;
 
 DROP TABLE IF EXISTS `cars`;
 CREATE TABLE `cars` (
@@ -23,36 +22,36 @@ CREATE TABLE `cars` (
 SET autocommit=1;
 #cars
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "car3.jpg", "car", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("Fire", "car3.jpg", "car", 2020, 23, 20, 28, 20000, 100, 6);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "car1.jpg", "car", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("Foolio", "car1.jpg", "car", 2019, 19, 18, 20, 18000, 200, 8);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "car2.jpg", "car", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("Runabout", "car2.jpg", "car", 2018, 44, 48, 34, 10000, 300, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "car4.jpg", "car", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("Salma", "car4.jpg", "car", 2020, 15, 18, 12, 10000, 100, 4);
 
 #suvs
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("suv1", "suv1.jpg", "SUV", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("suv1", "suv1.jpg", "SUV", 2019, 12, 12, 12, 10000, 100, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("suv2", "suv2.jpg", "SUV", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("suv2", "suv2.jpg", "SUV", 2018, 12, 12, 12, 10000, 100, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
 VALUES ("suv3", "suv3.jpg", "SUV", 2020, 12, 12, 12, 10000, 100, 10);
 
 #trucks
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "truck1.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("truck1", "truck1.jpg", "truck", 2019, 12, 12, 12, 10000, 100, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "truck2.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("truck2", "truck2.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
 
 INSERT INTO cars (`modelName`, `filePath`, `type`, `modelYear`, `MPG-mean`, `MPG-city`, `MPG-highway`, `BasePrice`, `horsepower`, `seating`) 
-VALUES ("Fire", "truck3.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
+VALUES ("truck3", "truck3.jpg", "truck", 2020, 12, 12, 12, 10000, 100, 10);
 
 
 DROP TABLE IF EXISTS `locations`;

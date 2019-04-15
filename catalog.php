@@ -1,18 +1,18 @@
 
 <?php
 //instantiating the PDO 
-define('DBHOST', '');
-define('DBNAME', 'cars');
-define('DBUSER', 'root');
-define('DBPASS', '');
-define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
+define('DBHOST', 'mysql.kiatto.me');
+define('DBNAME', 'kiattome_cars');
+define('DBUSER', 'kiattome');
+define('DBPASS', 'WSFnnKZ5');
+define('DBCONNSTRING','mysql:host=mysql.kiatto.me;mysql:dbname=kiattome_cars;charset=utf8mb4;');
 $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 function createCategory($modelType){
-global $pdo;
-	$sqlAllCars = "select * from cars";
-	$result =$pdo->query($sqlAllCars);
+    global $pdo;
+	$sqlAllCars = "SELECT * FROM cars";
+	$result = $pdo->query("SELECT * FROM kiattome_cars.cars");
 	while($row = $result->fetch()){
 		if($modelType == $row['type']){
 			echo
@@ -91,5 +91,6 @@ global $pdo;
 </body>
 
 </html>
+
 
 

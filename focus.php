@@ -36,7 +36,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$car = $result->fetch();
 	echo
 	'<div class="jumbotron">
-		<h1>'.$car['modelYear'].' '.$car['modelName'].'</h1>
+		<h1 style="background-color: rgba(0,0,0,0.5); margin: 2px;">'.$car['modelYear'].' '.$car['modelName'].'</h1>
 		<img class="jumbo" src="images/'.$car['filePath'].'" alt="'.$car['modelName'].'">
 	</div>
 	<div class="row justify-content-right">
