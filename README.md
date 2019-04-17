@@ -1,16 +1,3 @@
-# WebTechMidTerm
-Planned pages:
+# Dover Auto
 
-
-  index
-  
-  catalog
-  
-  product description
-    
-  login
-  
-  about
-  
-  contact
-  
+This is a fictional website demonstrating various languages and principles of front end development. 
