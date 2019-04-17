@@ -9,7 +9,7 @@
 </head>
   
 <body>
-
+<h2>Conway's life (toroidal)</h2>
 <table id="grid">
 
 </table>
@@ -18,8 +18,8 @@
 </body>
 <script>
 	var grid = document.getElementById("grid");
-	var rows = 10;
-	var cols = 10;
+	var rows = 15;
+	var cols = 15;
 		for(var i = 0; i < rows; i++){
 			grid.innerHTML += "<tr>";
 			var temp = "";
@@ -39,17 +39,33 @@
 		function spawn(){
 			console.log("spawn");
 			for(var i = 0; i < rows*cols-1; i++){
+				cells[i].name = "";
 				var c = liveCount(i);
 				var cString = c.toString();
-				cells[i].className = cString;
+				cells[i].name = cString;
 				}
 
 			//console.log("for first ending");
 			
 			for(var i2 = 0; i2 < rows*cols-1; i2++){
 				console.log(cells[i2].className);
-				if(cells[i2].className == "2")
-					cells[i2].className = "live";
+				if(cells[i2].className == "live"){
+					if(cells[i2].name == "2" ||
+					   cells[i2].name == "3")
+						{	
+							cells[i2].className = "live";
+						}
+					else
+					{
+						cells[i2].className = "";
+					}
+				}
+				else{
+					if(cells[i2].name == "3")
+					{
+						cells[i2].className = "live";
+					}
+				}
 			}
 		}
 		
@@ -68,19 +84,26 @@
 		
 		function liveCount(index){
 			var count = 0;
-			if(index != 0)
+			if(index > (cols+1)){
 				if(cells[index-1].className == "live")
 					count++;
-			if(index != rows*cols)
-				if(cells[index+1].className =="live")
-					count++;
-			if(index < (rows*cols) - cols)
-				if(cells[index+cols].className =="live")
-					count++;
-			if(index > cols)
 				if(cells[index-cols].className =="live")
 					count++;
-			//console.log(count);
+				if(cells[index-cols-1].className =="live")
+					count++;
+				if(cells[index-cols+1].className =="live")
+					count++;
+			}
+			if(index < (rows*cols) - (cols + 1)){
+				if(cells[index+1].className == "live")
+					count++;
+				if(cells[index+cols].className =="live")
+					count++;
+				if(cells[index+cols-1].className =="live")
+					count++;
+				if(cells[index+cols+1].className =="live")
+					count++;
+			}
 			return count;
 		}
 </script>
