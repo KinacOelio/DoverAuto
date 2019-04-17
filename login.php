@@ -47,10 +47,22 @@ border-style: dashed;
 	padding: 2px 260px;
 }
 </style>
+<meta charset="utf-8">  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home | Dover Auto</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/masterSmall.css">
+	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/masterLarge.css">
+	<link href="css/index.css" rel="stylesheet">
+	<script type="text/javaScript" src="javaScript/jquery-3.3.1.js"></script>
+
   <title>Registration</title>
  
 </head>
 <body>
+
+<div id="navbar"></div>
   <div class="header">
   	<h2>Login</h2>
   </div>
@@ -75,5 +87,6 @@ border-style: dashed;
   	 <a href="main.php" id="cSub">continue as guess</a>
   	</p>
   </form>
+  <script src="javaScript/master.js"></script>
 </body>
 </html>
