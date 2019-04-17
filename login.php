@@ -38,7 +38,7 @@
   	</div>
   	<p>
   		Not yet a member? <a href="register.php">Sign up</a>
-		or <a href="index.php">continue as guest</a>
+		or <a href="index.php?status=guest">continue as guest</a>
   	</p>
 	<p>
   	 

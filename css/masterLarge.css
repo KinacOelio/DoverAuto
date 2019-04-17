@@ -117,8 +117,9 @@ background-color: rgba(0, 0, 0, .2);
 max-height: 24px;
 border: none;
 margin-left: 8px;	
-	
-	
 }
 
+iframe{
+border: solid grey 2px;
+}
 
