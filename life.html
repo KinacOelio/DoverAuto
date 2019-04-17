@@ -36,6 +36,15 @@
 		grid.addEventListener("click", function(e){vive(e);});
 		var cur = 0;
 		
+		//seeding
+		cells[83].className = "live";
+		cells[84].className = "live";
+		cells[83+rows].className = "live";
+		cells[83+rows-1].className = "live";
+		cells[83+rows+rows].className = "live";
+		
+		
+		
 		function spawn(){
 			console.log("spawn");
 			for(var i = 0; i < rows*cols-1; i++){

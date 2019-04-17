@@ -2,51 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#in{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-	font-size: 20px;
-}
 
-#cSub {
-    background-color: white;
-    border: 3px solid;
-    border-radius: 4px;
-    cursor: pointer;
-	font-size: 30px;
-	 width: 100%;
-  display: center;
-  align-self: center;
-	 font-family: 'Jura', sans-serif;
-		
-}
-
-#cSub:hover {
-    webkit-animation:rainbow 2s infinite;
-ms-animation:rainbow 2s infinite;
-o-animation:rainbow 2s infinite;
-animation:rainbow 2s infinite;
-border-style: dashed;
-	
-	
-}
-
-
-.cf
-{
-	 font-family: 'Jura', sans-serif;	
-		  width: 80%;
-	 text-align: center;
-	padding: 2px 260px;
-}
-</style>
   <title></title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">  
@@ -56,7 +12,7 @@ border-style: dashed;
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" media="screen and (max-width: 1200px)" href="css/masterSmall.css">
 	<link rel="stylesheet" media="screen and (min-width: 1200px)" href="css/masterLarge.css">
-	<link href="css/index.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 	<script type="text/javaScript" src="javaScript/jquery-3.3.1.js"></script>
 </head>
 <body>

@@ -1,6 +1,6 @@
 #in{
-    width: 100%;
-    padding: 12px;
+    width: 80%;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -10,7 +10,19 @@
 	font-size: 20px;
 }
 
+
+.btn{
+position: relative;
+left: 50px;
+}
+label{
+width: 100px;
+margin: 10px;
+}
+
 .in{
+	margin-right: 40px;
+	float: right;
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -23,12 +35,14 @@
 }
 
 #cSub {
+
     background-color: white;
-    border: 3px solid;
+	margin: 20px;
+    border: 3px solid grey;
     border-radius: 4px;
     cursor: pointer;
-	font-size: 30px;
-	 width: 100%;
+	font-size: 20px;
+	 width: 80%;
   align-self: center;
 	 font-family: 'Jura', sans-serif;
 		
@@ -36,12 +50,8 @@
 
 #cSub:hover {
 
-animation:rainbow 2s infinite;
-border-style: dashed;
-	
-	
-}
 
+}
 
 .cf
 {
