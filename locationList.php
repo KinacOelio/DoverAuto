@@ -4,9 +4,10 @@ define('DBHOST', '');
 define('DBNAME', 'cars');
 define('DBUSER', 'root');
 define('DBPASS', '');
-define('DBCONNSTRING','mysql:dbname='.DBNAME.';charset=utf8mb4;');
+define('DBCONNSTRING','mysql:dbname=cars;charset=utf8mb4;');
 $pdo = new PDO(DBCONNSTRING,DBUSER,DBPASS);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 function location(){
 	global $pdo;

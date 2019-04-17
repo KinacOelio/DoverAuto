@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>life</title>
+    <link href="life.css" rel="stylesheet"> 
+</head>
+  
+<body>
+
+<table id="grid">
+
+</table>
+	
+	
+</body>
+<script>
+	var grid = document.getElementById("grid");
+	var rows = 10;
+	var cols = 10;
+		for(var i = 0; i < rows; i++){
+			grid.innerHTML += "<tr>";
+			var temp = "";
+			for (var j = 0; j < cols; j++){
+			temp += "<td>    </td>";
+			}
+			grid.innerHTML += temp;
+			grid.innerHTML += "</tr>";
+		}
+				
+		var cells = document.querySelectorAll("td");
+		console.log(cells.length);
+		document.addEventListener("keypress", spawn);
+		grid.addEventListener("click", function(e){vive(e);});
+		var cur = 0;
+		
+		function spawn(){
+			console.log("spawn");
+			for(var i = 0; i < rows*cols-1; i++){
+				var c = liveCount(i);
+				var cString = c.toString();
+				cells[i].className = cString;
+				}
+
+			//console.log("for first ending");
+			
+			for(var i2 = 0; i2 < rows*cols-1; i2++){
+				console.log(cells[i2].className);
+				if(cells[i2].className == "2")
+					cells[i2].className = "live";
+			}
+		}
+		
+		function vive(e){
+			console.log("vive");
+			console.log(e.target);
+			if(e.target.className == "live"){
+			console.log("currently live");
+				e.target.className = "";
+			}
+			else{
+				console.log("currently dead");
+				e.target.className = "live";
+			}	
+		}
+		
+		function liveCount(index){
+			var count = 0;
+			if(index != 0)
+				if(cells[index-1].className == "live")
+					count++;
+			if(index != rows*cols)
+				if(cells[index+1].className =="live")
+					count++;
+			if(index < (rows*cols) - cols)
+				if(cells[index+cols].className =="live")
+					count++;
+			if(index > cols)
+				if(cells[index-cols].className =="live")
+					count++;
+			//console.log(count);
+			return count;
+		}
+</script>
+</html>
+
+

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,12 +30,12 @@
 			<div class="mapouter">
 				<div class="gmap_canvas"><a href="https://www.pureblack.de/webdesign-muenchen/">
 					<?php
-						if(sizeof($_GET) == 0){$_GET['location'] = }
+						if(sizeof($_GET)==0){$_GET['location'] = '123 west st.';}
 						echo '</a><iframe width="600" height="500" id="gmap_canvas" 
-						src="https://maps.google.com/maps?q=106 e michigan ave, kalamazoo&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+						src="https://maps.google.com/maps?q='.$_GET['location'].'kalamazoo&t=&z=13&ie=UTF8&iwloc=&output=embed" 
 						frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>';
 					?>
-				</div>
+			</div>
 			</div>
 		</div>
 	</div>
