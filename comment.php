@@ -1,4 +1,10 @@
 <?php
+define('DBUSER', 'testuser');
+define('DBPASS', 'mypassword');
+define('DBCONNSTRING', 'mysql:host=localhost;dbname=shoes;charset=utf8mb4;');
+
+?>
+<?php
 
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $servername = "localhost";
@@ -226,6 +232,35 @@ $(document).ready(function(){
 <button type="submit" id="cSub" value="Submit" ><h2>Submit</h2></button>
 
 </form>
+</div>
+<div>
+<?php
+try {
+
+
+#STEP 1 Establish database connection
+ $pdo = new PDO(DBCONNSTRING, DBUSER, DBPASS);
+ echo "";
+#STEP 2.1 Handle database query errors
+ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+ #STEP 3 Execute SQL queries
+$sql = "SELECT username, feedback FROM comment";
+$result = $pdo->query($sql);
+#STEP 4 Process the Query result
+while ($row = $result->fetch()) {
+	echo "<br>".$row['username']."<br>".$row['feedback'];
+}
+#STEP 5 Close database connection and free resources
+$pdo = null;
+
+}
+#STEP 2 Handle database connection errors
+catch (PDOException $e){
+	echo "Database connection failed!";
+	die($e->getMessage()); //exit
+}
+?>
 </div>
 <div id="footer">
 <div id="footer">
